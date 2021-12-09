@@ -11,4 +11,10 @@
 if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
+
+function wpb_custom_nav_menu() {
+	register_nav_menu('nav-menu', ('Nav'));
+}
+add_action('init' , 'wpb_custom_nav_menu');	
+
 ?>

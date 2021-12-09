@@ -15,3 +15,9 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<!-- Nav-Start -->
+<?php wp_nav_menu( array(
+	'theme_location' => 'nav-menu',
+	'menu_class'	=> 'navbar-nav',
+	'container'	=> 'ul'	
+));?>
