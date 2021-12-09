@@ -8,7 +8,19 @@
 
 get_header();?>
 <div class="page-content">
-    <p>Hello, world!</p>
+<header>
+<nav>
+	<div>
+		<img src="<?php the_post_thumbnail()?>" alt="logo">
+	</div>
+<!-- Nav-Start -->
+<?php wp_nav_menu( array(
+	'theme_location' => 'nav-menu',
+	'menu_class'	=> 'navbar-nav',
+	'container'	=> 'ul'	
+));?>
+</nav>
+</header>
     <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : ?>
             <?php the_post(); ?>
