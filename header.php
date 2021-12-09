@@ -15,9 +15,16 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<header>
+<nav>
+	<div>
+		<img src="<?php the_post_thumbnail()?>" alt="logo">
+	</div>
 <!-- Nav-Start -->
 <?php wp_nav_menu( array(
 	'theme_location' => 'nav-menu',
 	'menu_class'	=> 'navbar-nav',
 	'container'	=> 'ul'	
 ));?>
+</nav>
+</header>
